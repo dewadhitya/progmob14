@@ -62,10 +62,9 @@ public class InputActivity extends AppCompatActivity {
         String nama = String.valueOf(inputNama.getText().toString());
         String alamat = String.valueOf(inputAlamat.getText().toString());
 
-        //// TODO: 11/7/2017 Masih Error
         int gender = jenisKelamin.getCheckedRadioButtonId();
         jkelamin = (RadioButton) findViewById(gender);
-        //String jKelamin = String.valueOf(jenis_kelamin.getText().toString());
+        String kelamin = String.valueOf(jkelamin.getText().toString());
 
         //// TODO: 11/6/2017 Ngambil hasil string dari Checkbox
         String hobi = "";
@@ -91,7 +90,7 @@ public class InputActivity extends AppCompatActivity {
         //// TODO: 11/6/2017 Ngambil hasil string dari Seekbar
 
         //Set Pesan Dialog
-        alertDialogBuilder.setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+jkelamin.getText());
+        alertDialogBuilder.setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+kelamin);
 
         //Membuat Alert Dialog dari Builder
         AlertDialog alertDialog = alertDialogBuilder.create();
