@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="30"
+        app:met_singleLineEllipsis="true"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"
+        android:inputType="textCapWords"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="50"
+        app:met_singleLineEllipsis="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin :" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jenis_kelamin">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pria"
+                android:paddingRight="50dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wanita" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hobi :"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/hb_jogging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogging"
+            android:paddingRight="25dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_bersepeda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bersepeda"
+            android:paddingRight="25dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_membaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Membaca"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/hb_menari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menari"
+            android:paddingRight="31dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_melukis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Melukis"
+            android:paddingRight="44dp"/>
+
+        <CheckBox
+            android:id="@+id/hb_bermain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bermain"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seberapa sering anda melakukan Hobi anda?"
+        android:padding="10dp"/>
+
+    <SeekBar
+        android:id="@+id/aktivitas"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="2"
+        android:progress="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 Hari sekali"
+            android:paddingRight="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Hari sekali"
+            android:paddingRight="65dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setiap hari"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"/>
+</LinearLayout>
