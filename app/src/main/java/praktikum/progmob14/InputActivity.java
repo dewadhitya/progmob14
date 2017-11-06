@@ -20,6 +20,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class InputActivity extends AppCompatActivity {
     MaterialEditText inputNama, inputAlamat;
     RadioGroup jenisKelamin;
+    RadioButton jkelamin;
     CheckBox hbJogging, hbBersepeda, hbMembaca, hbMenari, hbMelukis, hbBermain;
     SeekBar aktivitas;
     Button simpanHasil;
@@ -61,9 +62,10 @@ public class InputActivity extends AppCompatActivity {
         String nama = String.valueOf(inputNama.getText().toString());
         String alamat = String.valueOf(inputAlamat.getText().toString());
 
+        //// TODO: 11/7/2017 Masih Error
         int gender = jenisKelamin.getCheckedRadioButtonId();
-        RadioButton jenis_kelamin = (RadioButton) findViewById(gender);
-        String jKelamin = String.valueOf(jenis_kelamin.getText().toString());
+        jkelamin = (RadioButton) findViewById(gender);
+        //String jKelamin = String.valueOf(jenis_kelamin.getText().toString());
 
         //// TODO: 11/6/2017 Ngambil hasil string dari Checkbox
         String hobi = "";
@@ -89,6 +91,12 @@ public class InputActivity extends AppCompatActivity {
         //// TODO: 11/6/2017 Ngambil hasil string dari Seekbar
 
         //Set Pesan Dialog
-        alertDialogBuilder
+        alertDialogBuilder.setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+jkelamin.getText());
+
+        //Membuat Alert Dialog dari Builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        //Menampilkan Alert Dialog
+        alertDialog.show();
     }
 }

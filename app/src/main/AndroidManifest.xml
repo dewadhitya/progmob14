@@ -20,6 +20,10 @@
         <activity android:name=".MainActivity">
 
         </activity>
+
+        <activity android:name=".InputActivity">
+
+        </activity>
     </application>
 
 </manifest>

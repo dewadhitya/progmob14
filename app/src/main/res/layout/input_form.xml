@@ -36,23 +36,23 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/jenis_kelamin">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
+        android:id="@+id/jenis_kelamin"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
             <RadioButton
+                android:id="@+id/pria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pria"
                 android:paddingRight="50dp"/>
 
             <RadioButton
+                android:id="@+id/wanita"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wanita" />
-        </LinearLayout>
+
     </RadioGroup>
 
     <TextView
