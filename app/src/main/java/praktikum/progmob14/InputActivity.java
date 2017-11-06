@@ -57,6 +57,7 @@ public class InputActivity extends AppCompatActivity {
         //Set Title Dialog
         alertDialogBuilder.setTitle("Hasil");
 
+        //Mengambil Hasil Inputan
         String nama = String.valueOf(inputNama.getText().toString());
         String alamat = String.valueOf(inputAlamat.getText().toString());
 
