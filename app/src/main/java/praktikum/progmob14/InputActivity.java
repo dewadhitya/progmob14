@@ -69,28 +69,31 @@ public class InputActivity extends AppCompatActivity {
         //// TODO: 11/6/2017 Ngambil hasil string dari Checkbox
         String hobi = "";
         if(hbJogging.isChecked()){
-            hobi+="Jogging";
+            hobi+="- Jogging\n";
         }
         if(hbBersepeda.isChecked()){
-            hobi+="Bersepeda";
+            hobi+="- Bersepeda\n";
         }
         if(hbMembaca.isChecked()){
-            hobi+="Membaca";
+            hobi+="- Membaca\n";
         }
         if(hbMenari.isChecked()){
-            hobi+="Menari";
+            hobi+="- Menari\n";
         }
         if(hbMelukis.isChecked()){
-            hobi+="Melukis";
+            hobi+="- Melukis\n";
         }
         if(hbBermain.isChecked()){
-            hobi+="Bermain";
+            hobi+="- Bermain\n";
         }
 
         //// TODO: 11/6/2017 Ngambil hasil string dari Seekbar
 
+
         //Set Pesan Dialog
-        alertDialogBuilder.setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+kelamin);
+        alertDialogBuilder.
+                setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+kelamin+
+                        "\nAktivitas yang disukai : \n"+hobi);
 
         //Membuat Alert Dialog dari Builder
         AlertDialog alertDialog = alertDialogBuilder.create();
