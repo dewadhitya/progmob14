@@ -101,8 +101,8 @@ public class InputActivity extends AppCompatActivity {
 
         //Set Pesan Dialog
         alertDialogBuilder.
-                setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+kelamin+
-                        "\nAktivitas yang disukai : \n"+hobi+"Aktivtas sering dilakukan : "+hasilAktivitas);
+                setMessage("Nama    : "+nama+"\nAlamat  : "+alamat+"\nJenis Kelamin : "+kelamin+
+                        "\nAktivitas yang disukai   : \n"+hobi+"Aktivitas sering dilakukan   : "+hasilAktivitas);
 
         //Membuat Alert Dialog dari Builder
         AlertDialog alertDialog = alertDialogBuilder.create();

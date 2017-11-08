@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Isikan DATA Anda !"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:paddingBottom="5dp"/>
+
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/input_nama"
         android:layout_width="match_parent"
@@ -45,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pria"
-                android:paddingRight="50dp"/>
+                android:paddingRight="30dp"/>
 
             <RadioButton
                 android:id="@+id/wanita"
@@ -71,14 +80,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jogging"
-            android:paddingRight="25dp"/>
+            android:paddingRight="15dp"/>
 
         <CheckBox
             android:id="@+id/hb_bersepeda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bersepeda"
-            android:paddingRight="25dp"/>
+            android:paddingRight="15dp"/>
 
         <CheckBox
             android:id="@+id/hb_membaca"
@@ -99,14 +108,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Menari"
-            android:paddingRight="31dp"/>
+            android:paddingRight="21dp"/>
 
         <CheckBox
             android:id="@+id/hb_melukis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Melukis"
-            android:paddingRight="44dp"/>
+            android:paddingRight="34dp"/>
 
         <CheckBox
             android:id="@+id/hb_bermain"
@@ -141,13 +150,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 Hari sekali"
-            android:paddingRight="60dp"/>
+            android:paddingRight="45dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3 Hari sekali"
-            android:paddingRight="65dp"/>
+            android:paddingRight="50dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -159,5 +168,7 @@
         android:id="@+id/simpan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan"/>
+        android:text="Simpan"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"/>
 </LinearLayout>
