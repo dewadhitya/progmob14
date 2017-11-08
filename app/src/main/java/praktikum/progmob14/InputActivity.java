@@ -66,7 +66,7 @@ public class InputActivity extends AppCompatActivity {
         jkelamin = (RadioButton) findViewById(gender);
         String kelamin = String.valueOf(jkelamin.getText().toString());
 
-        //// TODO: 11/6/2017 Ngambil hasil string dari Checkbox
+        //Mengambil hasil inputan checkbox
         String hobi = "";
         if(hbJogging.isChecked()){
             hobi+="- Jogging\n";
