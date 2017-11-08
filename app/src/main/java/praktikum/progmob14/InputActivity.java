@@ -87,13 +87,22 @@ public class InputActivity extends AppCompatActivity {
             hobi+="- Bermain\n";
         }
 
-        //// TODO: 11/6/2017 Ngambil hasil string dari Seekbar
-
+        String hasilAktivitas = "";
+        int hAktivitas = aktivitas.getProgress();
+        if (hAktivitas == 0){
+            hasilAktivitas="5 hari sekali";
+        }
+        else if(hAktivitas == 1){
+            hasilAktivitas="3 hari sekali";
+        }
+        else {
+            hasilAktivitas="setiap hari";
+        }
 
         //Set Pesan Dialog
         alertDialogBuilder.
                 setMessage("Nama : "+nama+"\nAlamat : "+alamat+"\nJenis Kelamin : "+kelamin+
-                        "\nAktivitas yang disukai : \n"+hobi);
+                        "\nAktivitas yang disukai : \n"+hobi+"Aktivtas sering dilakukan : "+hasilAktivitas);
 
         //Membuat Alert Dialog dari Builder
         AlertDialog alertDialog = alertDialogBuilder.create();
