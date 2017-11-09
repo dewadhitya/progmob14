@@ -46,7 +46,16 @@ public class InputActivity extends AppCompatActivity {
         simpanHasil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog();
+                //Validasi Inputan
+                if (inputNama.getText().toString().length()==0){
+                    inputNama.setError("Nama diperlukan !");
+                }
+                else if(inputAlamat.getText().toString().length()==0){
+                    inputAlamat.setError("Alamat diperlukan !");
+                }
+                else{
+                    showDialog();
+                }
             }
         });
     }
