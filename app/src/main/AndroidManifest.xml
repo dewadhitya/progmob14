@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splashscreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +25,11 @@
 
         <activity android:name=".InputActivity"
             android:label="KUISIONER">
+
+        </activity>
+
+        <activity android:name=".OutputActivity"
+            android:label="DATA KUISIONER">
 
         </activity>
     </application>
