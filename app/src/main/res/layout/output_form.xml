@@ -71,4 +71,21 @@
         android:id="@+id/aktivitas"
         android:paddingBottom="6dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan data ke Database?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/simpan_database"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"/>
+
 </LinearLayout>

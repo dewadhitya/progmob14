@@ -1,9 +1,11 @@
 package praktikum.progmob14;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +15,8 @@ import android.widget.Toast;
 
 public class OutputActivity extends AppCompatActivity {
     TextView outputNama, outputAlamat, jenisKelamin, hobi, aktivitas;
+    DataHelper dbHelper;
+    Button simpanDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,49 +24,31 @@ public class OutputActivity extends AppCompatActivity {
         setContentView(R.layout.output_form);
 
         ///MODUL 2 -- MENGAMBIL DATA DARI ACTIVITY INPUT
-        //Inisialisasi Variabel pada outuput_from
+        //Inisialisasi Variabel pada output_from
         outputNama = (TextView) findViewById(R.id.output_nama);
         outputAlamat = (TextView) findViewById(R.id.output_alamat);
         jenisKelamin = (TextView) findViewById(R.id.jenis_kelamin);
         hobi = (TextView) findViewById(R.id.hobi);
         aktivitas = (TextView) findViewById(R.id.aktivitas);
 
-        //Mengambil data dari InputActivity
+        //Inisialisasi  Variabel Button ke Database
+        simpanDatabase = (Button) findViewById(R.id.simpan_database);
+
+        //Mengambil data dari InputActivity dan menampilkannya
         outputNama.setText(getIntent().getStringExtra("nama"));
         outputAlamat.setText(getIntent().getStringExtra("alamat"));
         jenisKelamin.setText(getIntent().getStringExtra("kelamin"));
         hobi.setText(getIntent().getStringExtra("hobi"));
         aktivitas.setText(getIntent().getStringExtra("hasilAktivitas"));
-    }
 
-    //MODUL 2 --
-    //Untuk mengetahui status dari Lifecycle di Pesan Log
-    String status = "Android: ";
-    /**Method ini dipanggil ketika activity sudah terlihat pada user. */
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.d( status,"The onStart() event");
-    }
-    /**Method ini dipanggil ketika activity mulai berinteraksi dengan user.*/
-    @Override
-    protected void onResume(){
-        super.onResume();
-        Log.d(status, "The onResume() event");
-    }
-    /**Method ini Dipanggil ketika activity berhenti sementara tidak menerima inputan user
-     dan tidak mengeksekusi kode apapun.*/
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.d(status,"The onPause() event ");
-        Toast.makeText(getApplicationContext(), "On Pause Method Applied in OutputActivity", Toast.LENGTH_LONG).show();
-    }
-    /**Method ini dipanggil ketika activity sudah tidak terlihat pada user.*/
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.d(status,"The onStop() event");
+        //Menyimpan ke Database
+        simpanDatabase.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                db.execSQL("insert into tb_kuisioner('nama', 'alamat', 'aktivitas') values('outputNama','outputAlamat','aktivitas');");
+            }
+        });
     }
 
     //DoubleTap2Back --

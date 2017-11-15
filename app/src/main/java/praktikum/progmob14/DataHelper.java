@@ -10,6 +10,8 @@ import android.util.Log;
  */
 
 public class DataHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "db_kuisioner.db";
+    private static final int DATABASE_VERSION = 1;
     public DataHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -19,6 +21,8 @@ public class DataHelper extends SQLiteOpenHelper {
         //Membuat Tabel
         String sql = "create table tb_kuisioner(id_kuisioner integer primary key, nama text null, alamat, text null, aktivitas text null);";
         Log.d("Data","onCreate: "+sql);
+        sqLiteDatabase.execSQL(sql);
+        sql = "insert into tb_kuisioner(id_kuisioner, nama, alamat, aktivitas) values ('1','Adhit','Jl. Mertayasa','setiap hari');";
         sqLiteDatabase.execSQL(sql);
     }
 
