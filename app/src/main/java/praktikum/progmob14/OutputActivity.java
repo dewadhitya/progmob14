@@ -1,6 +1,5 @@
 package praktikum.progmob14;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +32,7 @@ public class OutputActivity extends AppCompatActivity {
 
         //Inisialisasi  Variabel Button ke Database
         simpanDatabase = (Button) findViewById(R.id.simpan_database);
+        //dbHelper = new DataHelper(OutputActivity.this);
 
         //Mengambil data dari InputActivity dan menampilkannya
         outputNama.setText(getIntent().getStringExtra("nama"));
@@ -45,8 +45,16 @@ public class OutputActivity extends AppCompatActivity {
         simpanDatabase.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into tb_kuisioner('nama', 'alamat', 'aktivitas') values('outputNama','outputAlamat','aktivitas');");
+                //SQLiteDatabase db = dbHelper.getWritableDatabase();
+                final String nama = String.valueOf(outputNama.getText().toString());
+                final String alamat = String.valueOf(outputAlamat.getText().toString());
+                final String haktivitas = String.valueOf(aktivitas.getText().toString());
+                //db.execSQL("insert into tb_kuisioner('nama', 'alamat', 'aktivitas') values('outputNama','outputAlamat','aktivitas');");
+                //db.execSQL("insert into tb_kuisioner('nama','alamat','aktivitas') values('"+nama+"','"+alamat+"','"+haktivitas+"')");
+                //finish();
+                DataHelper dataHelper = new DataHelper(OutputActivity.this);
+                dataHelper.insert_data(nama,alamat,haktivitas);
+                Toast.makeText(OutputActivity.this, "Data telah disimpan di Database", Toast.LENGTH_LONG).show();
             }
         });
     }
