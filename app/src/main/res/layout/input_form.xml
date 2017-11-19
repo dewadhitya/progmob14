@@ -141,7 +141,7 @@
         android:max="2"
         android:progress="0" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="3dp"
@@ -151,19 +151,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 Hari sekali"
-            android:paddingRight="45dp"/>
+            android:layout_alignParentLeft="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3 Hari sekali"
-            android:paddingRight="50dp"/>
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Setiap hari"/>
-    </LinearLayout>
+            android:text="Setiap hari"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/simpan"
