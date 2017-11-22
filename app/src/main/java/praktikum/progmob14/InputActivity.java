@@ -61,6 +61,9 @@ public class InputActivity extends AppCompatActivity {
                 else if(inputAlamat.getText().toString().length()==0){
                     inputAlamat.setError("Alamat diperlukan !");
                 }
+                else if(!inputNama.getText().toString().trim().matches("[a-zA-Z]+")){
+                    inputNama.setError("Format Nama Salah !");
+                }
                 else{
                     showDialog();
                 }
@@ -73,7 +76,7 @@ public class InputActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
         //Set Title Dialog
-        alertDialogBuilder.setTitle("Apakah ingin menyimpan?");
+        alertDialogBuilder.setTitle("Apakah ingin mengkonfirmasi?");
 
         //Mengambil Hasil Inputan
         final String nama = String.valueOf(inputNama.getText().toString());
@@ -125,7 +128,7 @@ public class InputActivity extends AppCompatActivity {
                 .setMessage("Nama    : "+nama+"\nAlamat  : "+alamat+"\nJenis Kelamin : "+kelamin+
                         "\nAktivitas yang disukai   : \n"+hobi+"Aktivitas sering dilakukan   : "+hasilAktivitas)
                 .setCancelable(false)
-                .setPositiveButton("Simpan", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Konfirmasi", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(InputActivity.this, OutputActivity.class);
