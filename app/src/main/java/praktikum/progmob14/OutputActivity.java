@@ -81,7 +81,7 @@ public class OutputActivity extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         Log.d(status,"The onPause() event ");
-        Toast.makeText(getApplicationContext(), "On Pause Method Applied in InputActivity", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "On Pause Method Applied", Toast.LENGTH_LONG).show();
     }
     /**Method ini dipanggil ketika activity sudah tidak terlihat pada user.*/
     @Override
