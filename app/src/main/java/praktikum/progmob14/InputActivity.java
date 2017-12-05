@@ -55,7 +55,7 @@ public class InputActivity extends AppCompatActivity {
                 else if(inputAlamat.getText().toString().length()==0){
                     inputAlamat.setError("Alamat diperlukan !");
                 }
-                else if(!inputNama.getText().toString().trim().matches("[a-zA-Z]+")){
+                else if(!inputNama.getText().toString().trim().matches("[^0-9]+")){
                     inputNama.setError("Format Nama Salah !");
                 }
                 else{

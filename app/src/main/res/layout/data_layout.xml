@@ -6,17 +6,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama"
-        android:textStyle="bold"/>
+        android:text="Nama : "
+        android:textStyle="bold"
+        android:id="@+id/out_nama"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alamat"/>
+        android:text="Alamat : "
+        android:id="@+id/out_alamat"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aktivitas sering dilakukan"/>
+        android:text="Aktivitas sering dilakukan : "
+        android:id="@+id/out_aktivitas"/>
 
 </LinearLayout>

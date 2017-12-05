@@ -49,4 +49,5 @@ public class DataHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getReadableDatabase();
         database.execSQL("SELECT * FROM tb_kuisioner;");
     }
+
 }

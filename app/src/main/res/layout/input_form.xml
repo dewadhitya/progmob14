@@ -4,16 +4,36 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/background">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Isikan DATA Anda !"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:textSize="20sp"
-        android:paddingBottom="5dp"/>
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/logo_l"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="33dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isikan Data Anda !"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="33dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logo_l" />
+    </RelativeLayout>
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/input_nama"
@@ -74,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <CheckBox
             android:id="@+id/hb_jogging"
@@ -102,7 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <CheckBox
             android:id="@+id/hb_menari"
@@ -129,7 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Seberapa sering anda melakukan Hobi anda?"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
 
     <SeekBar
         android:id="@+id/aktivitas"
@@ -145,7 +165,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="3dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -171,6 +191,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Simpan"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/colorWhite"/>
 </LinearLayout>
